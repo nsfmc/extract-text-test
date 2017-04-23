@@ -66,7 +66,15 @@ const config = {
         loader: CSS_MODULES_LOADERS.FILE,
       },
     ],
-  }
+  },
+
+  plugins: [
+    new ExtractTextPlugin({
+      filename: '[name].css',
+      // This ensures chunk CSS is only loaded on demand. This may create a FOUC.
+      allChunks: false,
+    }),
+  ],
 }
 
 module.exports.default = config;

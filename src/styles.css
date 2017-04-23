@@ -1,0 +1,3 @@
+.boxbox {
+  composes: box from './base.css';
+}
