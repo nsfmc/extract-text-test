@@ -12,6 +12,6 @@
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack --config extract-text-config.js"
   }
 }
