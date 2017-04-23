@@ -7,11 +7,12 @@
     "css-loader": "^0.28.0",
     "extract-text-webpack-plugin": "^2.1.0",
     "postcss-import": "^9.1.0",
-    "postcss-loader": "^1.3.3",
+    "postcss-loader": "nsfmc/postcss-loader#3691cb757845599d2a5d97171daeda7d9be3f7f5",
     "style-loader": "^0.16.1",
     "webpack": "^2.4.1"
   },
   "scripts": {
-    "build": "webpack --config extract-text-config.js"
+    "build-extract": "webpack --config extract-text-config.js",
+    "build-plain": "webpack --config regular-postcss-config.js"
   }
 }
