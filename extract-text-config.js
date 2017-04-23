@@ -12,25 +12,7 @@ const CSS_MODULES_OPTIONS = {
   importLoaders: 1,
 };
 
-const POSTCSS_OPTIONS = {
-  plugins: function() {
-    return [
-      require('postcss-import'),
-    ];
-  },
-};
-
 const CSS_MODULES_LOADERS = {
-  // Used server-only
-  // CLASSNAMES_ONLY: [
-  //   {
-  //     loader: 'css-loader/locals',
-  //     options: CSS_MODULES_OPTIONS,
-  //   },
-  //   'postcss-loader',
-  // ],
-
-  // production
   FILE: ExtractTextPlugin.extract({
     fallback: 'style-loader',
     use: [
@@ -40,7 +22,11 @@ const CSS_MODULES_LOADERS = {
       },
       {
         loader: 'postcss-loader',
-        options: POSTCSS_OPTIONS,
+        options: plugins: function() {
+          return [
+            require('postcss-import'),
+          ];
+        },
       }
     ],
   }),
