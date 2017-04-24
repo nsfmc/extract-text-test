@@ -18,7 +18,7 @@ const POSTCSS_OPTIONS = {
 const config = {
   entry: './src/index.js',
   output: {
-    path: `${__dirname}/build`,
+    path: `${__dirname}/plain`,
     filename: 'index.js',
   },
   resolve: {

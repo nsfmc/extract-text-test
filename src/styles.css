@@ -1,3 +1,6 @@
+@value red from './vars.css';
+
 .boxbox {
   composes: box from './base.css';
+  color: red;
 }

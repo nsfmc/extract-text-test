@@ -22,10 +22,12 @@ const CSS_MODULES_LOADERS = {
       },
       {
         loader: 'postcss-loader',
-        options: plugins: function() {
-          return [
-            require('postcss-import'),
-          ];
+        options: {
+          plugins: function() {
+            return [
+              require('postcss-import'),
+            ];
+          }
         },
       }
     ],
@@ -36,7 +38,7 @@ const CSS_MODULES_LOADERS = {
 const config = {
   entry: './src/index.js',
   output: {
-    path: `${__dirname}/build`,
+    path: `${__dirname}/extract`,
     filename: 'index.js',
   },
   resolve: {
